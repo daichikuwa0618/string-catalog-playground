@@ -18,10 +18,5 @@ let package = Package(
     ],
     targets: [
         .target(name: "Utility"),
-        .target(name: "Samples"),
-        .testTarget(
-            name: "SamplesTests",
-            dependencies: ["Samples"]
-        ),
     ] + targetNames.map { .target(name: $0, dependencies: ["Utility"]) }
 )
