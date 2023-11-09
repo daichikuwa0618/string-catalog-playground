@@ -3,10 +3,18 @@
 
 import PackageDescription
 
+let targetNames: [String] = [
+    "StartHere",
+]
+
 let package = Package(
     name: "Samples",
+    platforms: [.iOS(.v15)],
     products: [
-        .library(name: "Samples", targets: ["Samples"]),
+        .library(
+            name: "AllTargets",
+            targets: targetNames
+        ),
     ],
     targets: [
         .target(name: "Samples"),
@@ -14,5 +22,5 @@ let package = Package(
             name: "SamplesTests",
             dependencies: ["Samples"]
         ),
-    ]
+    ] + targetNames.map { .target(name: $0) }
 )
