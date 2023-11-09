@@ -13,14 +13,15 @@ let package = Package(
     products: [
         .library(
             name: "AllTargets",
-            targets: targetNames
+            targets: targetNames + ["Utility"]
         ),
     ],
     targets: [
+        .target(name: "Utility"),
         .target(name: "Samples"),
         .testTarget(
             name: "SamplesTests",
             dependencies: ["Samples"]
         ),
-    ] + targetNames.map { .target(name: $0) }
+    ] + targetNames.map { .target(name: $0, dependencies: ["Utility"]) }
 )
