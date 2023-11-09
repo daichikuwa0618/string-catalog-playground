@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C909089A2AFC816F00596B28 /* AllTargets in Frameworks */ = {isa = PBXBuildFile; productRef = C90908992AFC816F00596B28 /* AllTargets */; };
+		C909089D2AFC826800596B28 /* MonoModuleSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = C909089C2AFC826800596B28 /* MonoModuleSample.swift */; };
 		C98A6C552AFC7B82006AE3E5 /* StringCatalogPlaygroundApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98A6C542AFC7B82006AE3E5 /* StringCatalogPlaygroundApp.swift */; };
 		C98A6C572AFC7B82006AE3E5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98A6C562AFC7B82006AE3E5 /* ContentView.swift */; };
 		C98A6C592AFC7B83006AE3E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C98A6C582AFC7B83006AE3E5 /* Assets.xcassets */; };
@@ -14,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C909089C2AFC826800596B28 /* MonoModuleSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonoModuleSample.swift; sourceTree = "<group>"; };
 		C98A6C512AFC7B82006AE3E5 /* StringCatalogPlayground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StringCatalogPlayground.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C98A6C542AFC7B82006AE3E5 /* StringCatalogPlaygroundApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringCatalogPlaygroundApp.swift; sourceTree = "<group>"; };
 		C98A6C562AFC7B82006AE3E5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -26,17 +29,34 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C909089A2AFC816F00596B28 /* AllTargets in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C90908982AFC816F00596B28 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C909089B2AFC825500596B28 /* MonoModule */ = {
+			isa = PBXGroup;
+			children = (
+				C909089C2AFC826800596B28 /* MonoModuleSample.swift */,
+			);
+			path = MonoModule;
+			sourceTree = "<group>";
+		};
 		C98A6C482AFC7B82006AE3E5 = {
 			isa = PBXGroup;
 			children = (
 				C98A6C532AFC7B82006AE3E5 /* StringCatalogPlayground */,
 				C98A6C522AFC7B82006AE3E5 /* Products */,
+				C90908982AFC816F00596B28 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -51,6 +71,7 @@
 		C98A6C532AFC7B82006AE3E5 /* StringCatalogPlayground */ = {
 			isa = PBXGroup;
 			children = (
+				C909089B2AFC825500596B28 /* MonoModule */,
 				C98A6C542AFC7B82006AE3E5 /* StringCatalogPlaygroundApp.swift */,
 				C98A6C562AFC7B82006AE3E5 /* ContentView.swift */,
 				C98A6C582AFC7B83006AE3E5 /* Assets.xcassets */,
@@ -83,6 +104,9 @@
 			dependencies = (
 			);
 			name = StringCatalogPlayground;
+			packageProductDependencies = (
+				C90908992AFC816F00596B28 /* AllTargets */,
+			);
 			productName = StringCatalogPlayground;
 			productReference = C98A6C512AFC7B82006AE3E5 /* StringCatalogPlayground.app */;
 			productType = "com.apple.product-type.application";
@@ -109,6 +133,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ja,
 			);
 			mainGroup = C98A6C482AFC7B82006AE3E5;
 			productRefGroup = C98A6C522AFC7B82006AE3E5 /* Products */;
@@ -139,6 +164,7 @@
 			files = (
 				C98A6C572AFC7B82006AE3E5 /* ContentView.swift in Sources */,
 				C98A6C552AFC7B82006AE3E5 /* StringCatalogPlaygroundApp.swift in Sources */,
+				C909089D2AFC826800596B28 /* MonoModuleSample.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,6 +370,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C90908992AFC816F00596B28 /* AllTargets */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AllTargets;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C98A6C492AFC7B82006AE3E5 /* Project object */;
 }
